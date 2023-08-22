@@ -15,12 +15,12 @@ const App = () => {
     setMovies(data.Search);
   };
   useEffect(() => {
-    searchMovies("Batman");
+    searchMovies("Love");
   }, []);
 
   return (
     <div className="app">
-      <h1>MovieLand</h1>
+      <h1>The Movie App</h1>
 
       <div className="search">
         <input
