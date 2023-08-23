@@ -35,7 +35,6 @@ const App = () => {
         />
       </div>
 
-      {/* If Then/Else statement = ?/: */}
       {movies?.length > 0 ? (
         <div className="container">
           {movies.map((movie) => (
