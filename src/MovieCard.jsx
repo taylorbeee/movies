@@ -1,5 +1,6 @@
 import React from "react";
 
+//Passing movie as prop
 const MovieCard = ({ movie }) => {
   return (
     <div className="movie">
