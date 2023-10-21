@@ -10,18 +10,19 @@ const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
+  // Fetch API call
   const searchMovies = async (title) => {
     const response = await fetch(`${api_url}&s=${title}`);
     const data = await response.json();
     setMovies(data.Search);
   };
-
+  // Search on Enter
   const handleKeyPress = (e) => {
     if (e.key === "Enter") {
       searchMovies(searchTerm);
     }
   };
-
+  // [] runs useEffect in place of ComponentDidMount
   useEffect(() => {
     searchMovies("Love");
   }, []);
