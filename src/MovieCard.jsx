@@ -1,6 +1,6 @@
 import React from "react";
 
-//Passing movie as prop
+//Passing movie as prop - doesn't need to be 'props'
 const MovieCard = ({ movie }) => {
   return (
     <div className="movie">

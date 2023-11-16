@@ -3,14 +3,14 @@ import "./App.css";
 import SearchIcon from "./search.svg";
 import MovieCard from "./MovieCard";
 
-//MovieList API key
+// MovieList API key
 const api_url = "https://www.omdbapi.com?apikey=1e739027";
 
 const App = () => {
   const [movies, setMovies] = useState([]);
   const [searchTerm, setSearchTerm] = useState("");
 
-  // Fetch API call
+  // Fetch API call - look into using useFetch here ???
   const searchMovies = async (title) => {
     const response = await fetch(`${api_url}&s=${title}`);
     const data = await response.json();
@@ -22,7 +22,7 @@ const App = () => {
       searchMovies(searchTerm);
     }
   };
-  // [] runs useEffect in place of ComponentDidMount
+  // [] runs useEffect in place of ComponentDidMount - empty object
   useEffect(() => {
     searchMovies("Love");
   }, []);
